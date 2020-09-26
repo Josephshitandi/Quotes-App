@@ -23,6 +23,12 @@ export class QuoteComponent implements OnInit {
 
     this.quotes[index].downvote++;
   }
+  addNewQuote(quote){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    quote.date = new Date(quote.date)
+    this.quotes.push(quote)
+  }
 
   constructor() { }
 
