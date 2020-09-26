@@ -10,9 +10,10 @@ export class QuoteComponent implements OnInit {
   quotes: Quote[] =[
     new Quote(1,'Better your best','Joseph'),
   ];
-  // upVote(index){
-  //   this.quotes[index].upvote++;
-  // }
+  upVote(index){
+    
+    this.quotes[index].upvote++;
+  }
 
   // downVote(index){
   //   this.quotes[index].downvote++;
