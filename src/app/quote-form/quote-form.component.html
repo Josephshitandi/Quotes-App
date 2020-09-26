@@ -1,11 +1,11 @@
-<div class="container-fluid">
-    <h2 class="text-center">Create a new Goal</h2>
+<div class="container-fluid form1">
+    <h2 class="text-center">Add a new Quote</h2>
     <hr>
     <form >
         <div class="form-group">
   
             <label for="name">Quote</label>
-            <input type="text" class="form-control" id="text" [(ngModel)]="newQuote.text" name="text" #text='ngModel' required>
+            <textarea type="text" class="form-control" id="text" [(ngModel)]="newQuote.text" name="text" #text='ngModel' required></textarea>
             <div [hidden]="text.valid || text.pristine" class="alert alert-danger">
               <p>Quote is required</p>
             </div>
@@ -13,7 +13,7 @@
         <div class="form-group">
   
             <label for="author">Author</label>
-            <textarea class="form-control" id="author" rows="4" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required></textarea>
+            <input class="form-control" id="author" rows="4" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
             <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
               <p>Author is required</p>
             </div>
