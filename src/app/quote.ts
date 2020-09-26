@@ -6,11 +6,11 @@ export class Quote {
     upvote: number;
     downvote: number;
 
-    constructor(id: number,text:string, author:string, ){
+    constructor(id: number,text:string, author:string,date: Date ){
         this.id = id;
         this.text = text;
         this.author = author;
-        this.date = new Date();
+        this.date = date;
         this.upvote = 0;
         this.downvote = 0;
     }
