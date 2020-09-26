@@ -11,17 +11,18 @@ export class QuoteComponent implements OnInit {
     new Quote(1,'Better your best','Joseph'),
   ];
   upVote(index){
-    
+
     this.quotes[index].upvote++;
   }
 
-  // downVote(index){
-  //   this.quotes[index].downvote++;
-  // }
+  downVote(index){
+
+    this.quotes[index].downvote++;
+  }
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
