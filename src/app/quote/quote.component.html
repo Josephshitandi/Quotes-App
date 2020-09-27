@@ -6,15 +6,12 @@
           Quote {{ quote.id}}
         </div>
         <div class="list-group list-group-flush">
-          <p class="list-group-item"> <strong>Quote:</strong> {{ quote.text}}</p>
+          <li class="list-group-item"> <strong>Quote:</strong> {{ quote.text}}</li>
           <button class="btn btn-success" (click)="toggleDetails(i)">
             Show Details
           </button>
-          <app-quote-detail *ngIf="quote.description" [quote]="quote"></app-quote-detail>
-          <!-- <li class="list-group-item">Author: {{ quote.author}}</li>
-          <li class="list-group-item">Submitter: {{ quote.submitter}}</li>
-          <li class="list-group-item">Date: {{ quote.date|date}}</li> -->
-          <i class="fas fa-thumbs-up" (click)="upVote(i)"></i>{{ quote.upvote}} <i class="fas fa-thumbs-down" (click)="downVote(i)"></i>{{ quote.downvote}}
+          <app-quote-detail *ngIf="quote.description" [quote]="quote" (deleteQuote)="delete($event, i)"></app-quote-detail>
+          <li class="list-group-item"> <i class="fas fa-thumbs-up" (click)="upVote(i)"></i>{{ quote.upvote}} <i class="fas fa-thumbs-down" (click)="downVote(i)"></i>{{ quote.downvote}}</li>
          
           </div>
       </div>

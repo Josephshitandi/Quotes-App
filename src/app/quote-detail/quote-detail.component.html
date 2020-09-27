@@ -1,3 +1,7 @@
 <li class="list-group-item"><strong>Author:</strong>  {{ quote.author}}</li>
 <li class="list-group-item"><strong>Submitter:</strong> {{ quote.submitter}}</li>
 <li class="list-group-item"><strong>Date:</strong> {{ quote.date|date}}</li>
+<button class="btn btn-danger" (click)="deleteThisQuote(true)">Delete</button>
+
+
+

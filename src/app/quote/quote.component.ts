@@ -32,6 +32,17 @@ export class QuoteComponent implements OnInit {
   toggleDetails(index) {
     this.quotes[index].description = !this.quotes[index].description;
   }
+  delete(deleteThis: boolean, index: number) {
+    if (deleteThis) {
+      let confirmDelete = confirm(
+        'Are you sure you want to delete this quote?'
+      );
+      if (confirmDelete) {
+        this.quotes.splice(index, 1);
+      }
+    }
+  }
+  
 
 
   constructor() { }
