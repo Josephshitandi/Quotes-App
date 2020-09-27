@@ -7,8 +7,10 @@
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">Quote: {{ quote.text}}</li>
-          <li class="list-group-item">Author: {{ quote.author}}</li>
-          <li class="list-group-item">Date: {{ quote.date|date}}</li>
+          <app-quote-detail *ngIf="quote.showDetails"></app-quote-detail>
+          <!-- <li class="list-group-item">Author: {{ quote.author}}</li>
+          <li class="list-group-item">Submitter: {{ quote.submitter}}</li>
+          <li class="list-group-item">Date: {{ quote.date|date}}</li> -->
           <i class="fas fa-thumbs-up" (click)="upVote(i)"></i>{{ quote.upvote}} <i class="fas fa-thumbs-down" (click)="downVote(i)"></i>{{ quote.downvote}}
          
         </ul>
